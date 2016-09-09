@@ -54,7 +54,7 @@
 
         static function deleteAll()
         {
-            $_SESSION['list_of_albums'] = array();
+            $_SESSION['list_of_contacts'] = array();
         }
     }
  ?>
