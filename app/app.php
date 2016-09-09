@@ -21,4 +21,9 @@
         $newContact->save();
         return $app["twig"]->render("create_contact.html.twig", array("contacts" => Contact::getAll()));
     });
+
+    $app->get("/clear_list", function() use ($app) {
+        Contact::deleteAll();
+        return $app["twig"]->render("delete_contacts.html.twig");
+    });
  ?>
