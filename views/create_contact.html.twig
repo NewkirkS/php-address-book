@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Address Book</title>
+    </head>
+    <body>
+        <h1>My Address Book</h1>
+        <hr>
+        <h3>You added a new contact!</h3>
+        {% set contact = contacts|last %}
+        <ul>
+            <li>Name: {{ contact.name }}</li>
+            <li>Phone: {{ contact.phone }}</li>
+            <li>Address: {{ contact.address }}</li>
+        </ul>
+        <hr>
+        <a href="/">Back To Address Book</a>
+    </body>
+</html>
