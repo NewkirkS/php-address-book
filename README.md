@@ -19,7 +19,7 @@ _Dependencies: Silex, Twig_
 
 ## Known Bugs
 
-_None_
+_Index.php causing error message to display at the bottom of each page despite the program otherwise functioning as intended._
 
 ## Support and contact details
 

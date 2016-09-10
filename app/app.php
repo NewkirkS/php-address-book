@@ -18,7 +18,7 @@
     });
 
     $app->post("/form_submit", function() use ($app) {
-        $newContact = new Contact($_POST["input-name"], $_POST["input-phone"], $_POST["input-address"]);
+        $newContact = new Contact($_POST['input-name'], $_POST['input-phone'], $_POST['input-address']);
         $newContact->save();
         return $app["twig"]->render("create_contact.html.twig", array("contacts" => Contact::getAll()));
     });
@@ -27,4 +27,6 @@
         Contact::deleteAll();
         return $app["twig"]->render("delete_contacts.html.twig");
     });
+
+    $app->run();
  ?>

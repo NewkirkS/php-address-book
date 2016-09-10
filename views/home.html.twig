@@ -9,28 +9,30 @@
         <form action="/form_submit" method="post">
             <div>
                 <label for="input-name">Name:</label>
-                <input type="text" name="name" id="input-name">
+                <input id="input-name" type="text" name="input-name">
             </div>
             <div>
                 <label for="input-phone">Phone Number:</label>
-                <input type="text" name="phone" id="input-phone">
+                <input id="input-phone" type="text" name="input-phone">
             </div>
             <div>
                 <label for="input-address">Address:</label>
-                <input type="text" name="address" id="input-address">
+                <input id="input-address" type="text" name="input-address">
             </div>
-            <button type="submit">Add</button>
+            <button type="submit" name="submit">Add</button>
         </form>
         {% if contacts is not empty %}
         <hr>
         <h3>My Contacts</h3>
         <ol>
             {% for contact in contacts %}
-                <ul>
-                    <li>Name: {{ contact.name }}</li>
-                    <li>Phone: {{ contact.phone }}</li>
-                    <li>Address: {{ contact.address }}</li>
-                </ul>
+                <li>
+                    <ul>
+                        <li>Name: {{ contact.name }}</li>
+                        <li>Phone: {{ contact.phone }}</li>
+                        <li>Address: {{ contact.address }}</li>
+                    </ul>
+                </li>
             {% endfor %}
         </ol>
         <hr>

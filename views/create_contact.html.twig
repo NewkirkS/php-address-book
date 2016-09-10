@@ -9,9 +9,9 @@
         <h3>You added a new contact!</h3>
         {% set contact = contacts|last %}
         <ul>
-            <li>Name: {{ contact.name }}</li>
-            <li>Phone: {{ contact.phone }}</li>
-            <li>Address: {{ contact.address }}</li>
+            <li>Name: {{ contact.getName }}</li>
+            <li>Phone: {{ contact.getPhone }}</li>
+            <li>Address: {{ contact.getAddress }}</li>
         </ul>
         <hr>
         <a href="/">Back To Address Book</a>
