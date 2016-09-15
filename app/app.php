@@ -28,5 +28,5 @@
         return $app["twig"]->render("delete_contacts.html.twig");
     });
 
-    $app->run();
+    return $app;
  ?>
